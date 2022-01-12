@@ -4,7 +4,15 @@ This repository contains the initial stage of a student project to build a clone
 
 ---
 
-<center><h3>Repository Contents by Project Task</h3> </center>
+Table of Contents
+-----------------
+
+1. [Repository Contents by Project Task](#1)
+2. [General USe](#2)
+3. [Examples](#3)
+4. [Deploy static](./deploy_static.md)
+
+<center><h3 id="1">Repository Contents by Project Task</h3> </center>
 
 | Tasks | Files | Description |
 | ----- | ----- | ------ |
@@ -21,7 +29,7 @@ This repository contains the initial stage of a student project to build a clone
 | 10. Console 1.0 | [console.py](./console.py) [/models/engine/file\_storage.py](./models/engine/file_storage.py) | Update the console and file storage system to work dynamically with all  classes update file storage |
 <br>
 <br>
-<center> <h2>General Use</h2> </center>
+<center> <h2 id="2">General Use</h2> </center>
 
 1. First clone this repository.
 
@@ -67,7 +75,7 @@ Advanced syntax is implemented for the following commands:
 
 <br>
 <br>
-<center> <h2>Examples</h2> </center>
+<center> <h2 id="3">Examples</h2> </center>
 <h3>Primary Command Syntax</h3>
 
 ###### Example 0: Create an object
