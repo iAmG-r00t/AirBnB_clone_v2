@@ -8,7 +8,7 @@ Table of Contents
 -----------------
 
 1. [Repository Contents by Project Task](#1)
-2. [General USe](#2)
+2. [General use](#2)
 3. [Examples](#3)
 4. [Deploy static](./deploy_static.md)
 
