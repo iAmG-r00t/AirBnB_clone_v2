@@ -34,20 +34,9 @@ echo -e "\n${blue}Setting up some minor stuff.${reset}\n"
 sudo ufw allow 'Nginx HTTP'
 
 # Create directories...
-if [ -d "/data" ]; then
-	if ! [ -d "/data/web_static" ]; then
-		sudo mkdir -p /data/web_static
-	fi
-else
-	sudo mkdir -p /data/web_static
+if ! [ -d "/data/web_static" ]; then
+	sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
 fi
-
-# create sub-directories if not present
-for dir in /data/web_static/{releases,shared}; do
-	if ! [ -d "$dir" ]; then
-		sudo mkdir -p "$dir"
-	fi
-done
 
 index_file=\
 "<html>
@@ -58,12 +47,8 @@ index_file=\
   </body>
 </html>"
 
-# create test sub directories
-if ! [ -d "/data/web_static/releases/test/" ]; then
-	sudo mkdir -p /data/web_static/releases/test/
-	# with index.html to test my nginx install
-	
-	# creating test index
+# create index.html for test directory
+if [ -d "/data/web_static/releases/test/" ]; then
 	#shellcheck disable=SC2154
 	echo "$index_file" | sudo dd status=none of=/data/web_static/releases/test/index.html
 fi
