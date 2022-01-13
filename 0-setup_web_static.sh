@@ -12,17 +12,18 @@ reset='\033[0m'
 
 echo -e "${blue}Updating and doing some minor checks...${reset}\n"
 
-sudo apt-get update -y -qq && \
-	sudo apt-get install -y nginx -qq #install nginx
+# install nginx if not present
+if [ ! -x /usr/sbin/nginx ]; then
+	sudo apt-get update -y -qq && \
+	     sudo apt-get install -y nginx
+fi
 
 echo -e "\n${blue}Setting up some minor stuff.${reset}\n"
 
-# allowing nginx on firewall
-sudo ufw allow 'Nginx HTTP'
-
 # Create directories...
-sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
+sudo mkdir -p /data/web_static/releases/test /data/web_static/shared/
 
+# create index.html for test directory
 index_file=\
 "<html>
   <head>
@@ -31,18 +32,11 @@ index_file=\
     Holberton School
   </body>
 </html>"
-
-# create index.html for test directory
 #shellcheck disable=SC2154
 echo "$index_file" | sudo dd status=none of=/data/web_static/releases/test/index.html
 
-# delete symlink directory if it exists
-if [ -d "/data/web_static/current" ]; then
-	sudo rm -rf /data/web_static/current
-fi
-
 # create symbolic link
-sudo ln -s /data/web_static/releases/test /data/web_static/current
+sudo ln -sf /data/web_static/releases/test /data/web_static/current
 
 # give user ownership to directory
 sudo chown -R "$USER":"$USER" /data/
@@ -50,13 +44,10 @@ sudo chown -R "$USER":"$USER" /data/
 # backup default server config file
 sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
 
-NEW_STRING="\\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}\n"
-sudo sed -i "38i $NEW_STRING" /etc/nginx/sites-available/default
+# Set-up the content of /data/web_static/current/ to redirect
+# to domain.tech/hbnb_static
+sudo sed -i '37a\\tlocation /hbnb_static {\n\t\talias /data/web_static/current/hbnb_static;\n\t}' /etc/nginx/sites-enabled/default
 
-if [ "$(pgrep -c nginx)" -le 0 ]; then
-	sudo service nginx start
-else
-	sudo service nginx restart
-fi
+sudo service nginx restart
 
 echo -e "${green}Completed${reset}"
