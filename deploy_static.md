@@ -19,22 +19,17 @@
 </details>
 
 - [AirBnB clone](https://gracious-blackwell-eeb341.netlify.app/)
+- [How to use Fabric](https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments)
+- [How to use Fabric in Python](https://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python)
+- [Fabric and command line options](https://docs.fabfile.org/en/1.13/usage/fab.html)
+- [Nginx configuration for beginners](https://nginx.org/en/docs/beginners_guide.html)
+- [Difference between root and alias on NGINX](https://blog.heitorsilva.com/en/nginx/diferenca-entre-root-e-alias-do-nginx/)
+- [Fabric for Python 3](https://github.com/fabric/fabric)
+- [Fabric Documentation](https://www.fabfile.org/)
 
 ## Tasks
 
 <details>
-<summary><a href="./dummyfile">0. Task 0</a></summary><br>
-image source.
-</details>
-
-<details>
-<summary><a href="./dummyfile">0. Task 1</a></summary><br>
-image source
-<ul>
-  <li>Links from screenshot
-  <ul>
-      <li><a href="https://google.com">Google</a></li>
-  </ul>
-  </li>
-</ul>
+<summary><a href="./0-setup_web_static.sh">0. Prepare your web servers</a></summary><br>
+<a href='https://postimg.cc/nMXBWsMz' target='_blank'><img src='https://i.postimg.cc/wxV27Lph/image.png' border='0' alt='image'/></a>
 </details>
