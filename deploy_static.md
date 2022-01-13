@@ -18,7 +18,7 @@
 </ul>
 </details>
 
-- [AirBnB clone](./Concept_AirBnB-clone_ALX-Africa-Intranet.html)
+- [AirBnB clone](https://gracious-blackwell-eeb341.netlify.app/)
 
 ## Tasks
 
