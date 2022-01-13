@@ -34,9 +34,7 @@ echo -e "\n${blue}Setting up some minor stuff.${reset}\n"
 sudo ufw allow 'Nginx HTTP'
 
 # Create directories...
-if ! [ -d "/data/web_static" ]; then
-	sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
-fi
+sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
 
 index_file=\
 "<html>
