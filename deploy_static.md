@@ -33,3 +33,8 @@
 <summary><a href="./0-setup_web_static.sh">0. Prepare your web servers</a></summary><br>
 <a href='https://postimg.cc/nMXBWsMz' target='_blank'><img src='https://i.postimg.cc/wxV27Lph/image.png' border='0' alt='image'/></a>
 </details>
+
+<details>
+<summary><a href="./1-pack_web_static.py">1. Compress before sending</a></summary><br>
+<a href='https://postimg.cc/8F6n712g' target='_blank'><img src='https://i.postimg.cc/d0HMS3n3/image.png' border='0' alt='image'/></a>
+</details>
