@@ -18,16 +18,7 @@ echo -e "\nSetting up some minor stuff.\n"
 sudo mkdir -p /data/web_static/releases/test /data/web_static/shared/
 
 # create index.html for test directory
-index_file=\
-"<html>
-  <head>
-  </head>
-  <body>
-    Holberton School
-  </body>
-</html>"
-#shellcheck disable=SC2154
-echo "$index_file" | sudo dd status=none of=/data/web_static/releases/test/index.html
+echo "<h1>Welcome to th3gr00t.tech <\h1>" | sudo dd status=none of=/data/web_static/releases/test/index.html
 
 # create symbolic link
 sudo ln -sf /data/web_static/releases/test /data/web_static/current
