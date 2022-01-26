@@ -27,6 +27,19 @@
 - [Fabric for Python 3](https://github.com/fabric/fabric)
 - [Fabric Documentation](https://www.fabfile.org/)
 
+<details>
+<summary>Installing Fabric</summary>
+
+```sh
+# first install python3 and pip3
+sudo apt-get install python3 python3-pip
+
+# now lets install fabric
+pip3 install Fabric3
+```
+
+</details>
+
 ## Tasks
 
 <details>
@@ -37,4 +50,9 @@
 <details>
 <summary><a href="./1-pack_web_static.py">1. Compress before sending</a></summary><br>
 <a href='https://postimg.cc/8F6n712g' target='_blank'><img src='https://i.postimg.cc/d0HMS3n3/image.png' border='0' alt='image'/></a>
+</details>
+
+<details>
+<summary><a href="./2-do_deploy_web_static.py">2. Deploy archive!</a></summary><br>
+<a href='https://postimg.cc/DJbFykgS' target='_blank'><img src='https://i.postimg.cc/76KL9qJn/image.png' border='0' alt='image'/></a>
 </details>
