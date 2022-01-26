@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Fabric script to deploy tgz archive
+fab -f 2-do_deploy_web_static.py do_deploy:archive_path=filepath
+    -i private-key -u user
 """
 
 from os.path import exists
