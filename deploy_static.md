@@ -151,3 +151,8 @@ guillaume@ubuntu:~/AirBnB_clone_v2$
 ```
 
 </details>
+
+<details>
+<summary><a href="./100-clean_web_static.py">3. Keep it clean!</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/MKXrvvvP/image.png' border='0' alt='image'/></a>
+</details>

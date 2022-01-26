@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 creates and distributes an archive to your web servers
+fab -f 3-deploy_web_static.py deploy -i ssh-key -u ubuntu
 """
 
 from datetime import datetime
