@@ -33,7 +33,7 @@ echo "$index_file" | sudo dd status=none of=/data/web_static/releases/test/index
 sudo ln -sf /data/web_static/releases/test /data/web_static/current
 
 # give user ownership to directory
-sudo chown -hR "$USER":"$USER" /data/
+sudo chown -hR ubuntu:ubuntu /data/
 
 # backup default server config file
 sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
